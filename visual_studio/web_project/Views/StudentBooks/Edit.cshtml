@@ -1,0 +1,33 @@
+﻿@model ServiceLayer.Models.StudentBook
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container py-5">
+    <h1 class="mb-4">Edit StudentBook</h1>
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+        <input type="hidden" asp-for="Id" />
+        <div class="mb-3">
+            <label asp-for="studentId" class="form-label">Student ID</label>
+            <input asp-for="studentId" class="form-control" />
+            <span asp-validation-for="studentId" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="bookId" class="form-label">Book ID</label>
+            <input asp-for="bookId" class="form-control" />
+            <span asp-validation-for="bookId" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="Save" class="btn btn-success" />
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

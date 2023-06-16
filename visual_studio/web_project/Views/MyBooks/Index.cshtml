@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ServiceLayer.Models.MyBooks>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+    
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th id="authorName">
+                <h5>Book Title</h5>
+            </th>
+            <th id="authorName">
+                <h5>Author Name</h5>
+            </th>
+            <th id="authorName">
+                <h5>Genre Name</h5>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author.authorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre.genreName)
+            </td>
+            <td>
+                    <form method="post" asp-action="ReturnBook" asp-route-id="@item.Id">
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+                        <button type="submit" class="custom-button">Return</button>
+                    </form>
+
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<head>
+    <style>
+        #authorName {
+            color: red; /* istediğiniz rengi buraya yazın */
+        }
+    </style>
+</head>

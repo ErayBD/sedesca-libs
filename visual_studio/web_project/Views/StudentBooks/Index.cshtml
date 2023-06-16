@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ServiceLayer.Models.StudentBook>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-success" style="display: flex; justify-content: center; align-items: center; margin-top: 30px;">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th id="authorName">
+                <h5>Student ID</h5>
+            </th>
+            <th id="authorName">
+                <h5>Book ID</h5>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.studentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bookId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<head>
+    <style>
+        #authorName {
+            color: red; /* istediğiniz rengi buraya yazın */
+        }
+    </style>
+</head>

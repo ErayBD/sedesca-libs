@@ -1,0 +1,48 @@
+﻿@model ServiceLayer.Models.Student
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container py-5">
+    <h1 class="mb-4">Edit Student</h1>
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+        <input type="hidden" asp-for="Id" />
+        <div class="mb-3">
+            <label asp-for="firstName" class="form-label">First Name</label>
+            <input asp-for="firstName" class="form-control" />
+            <span asp-validation-for="firstName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="lastName" class="form-label">Last Name</label>
+            <input asp-for="lastName" class="form-control" />
+            <span asp-validation-for="lastName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="email" class="form-label">Email</label>
+            <input asp-for="email" class="form-control" />
+            <span asp-validation-for="email" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="phone" class="form-label">Phone</label>
+            <input asp-for="phone" class="form-control" />
+            <span asp-validation-for="phone" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="gender" class="form-label">Gender</label>
+            <input asp-for="gender" class="form-control" />
+            <span asp-validation-for="gender" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="Save" class="btn btn-success" />
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

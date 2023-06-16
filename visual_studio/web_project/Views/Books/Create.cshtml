@@ -1,0 +1,50 @@
+﻿@model ServiceLayer.Models.Book
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container py-5">
+    <h1 class="mb-4">Create New Book</h1>
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+        <div class="mb-3">
+            <label asp-for="title" class="form-label">Book Title</label>
+            <input asp-for="title" class="form-control" />
+            <span asp-validation-for="title" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="authorId" class="form-label">Author</label>
+            <select class="form-select" id="authorId" name="authorId">
+                @foreach (var item in ViewBag.Author) {
+                    <option value="@item.Value">@item.Text</option>
+                }
+            </select>
+        </div>
+
+
+        <div class="mb-5">
+            <label for="genreId" class="form-label">Genre</label>
+            <select class="form-select" id="genreId" name="genreId">
+                @foreach (var item in (SelectList)ViewBag.Genre) {
+                    <option value="@item.Value">@item.Text</option>
+                }
+            </select>
+        </div>
+
+
+
+        <div class="mb-3">
+            <input type="submit" value="Create" class="btn btn-success" />
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </form>
+    
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

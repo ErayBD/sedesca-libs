@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="centerImgTop">
+    <h1>Welcome To SedescaLibs!</h1><br />
+    <img src="~/images/top-left-logo.png"/>
+</div>
+
+
+
+<div style="margin-top: 250px; position: absolute;">
+    <a asp-area="" asp-controller="Students" asp-action="Index" style="text-decoration: none;"><button class="custom-button">Show All Members</button></a>
+    <a asp-area="" asp-controller="Books" asp-action="Index" style="text-decoration: none;"><button class="custom-button">Show All Books</button></a>
+    <a asp-area="" asp-controller="Authors" asp-action="Index" style="text-decoration: none;"><button class="custom-button">Show All Authors</button></a>
+    <a asp-area="" asp-controller="Genres" asp-action="Index" style="text-decoration: none;"><button class="custom-button">Show All Genres</button></a>
+</div>
+
+<div style="margin-top: 400px; margin-left: 1050px; position: absolute;">
+    <a asp-area="" asp-controller="MyBooks" asp-action="Index" style="text-decoration: none;"><button class="custom-button">Borrowed Books</button></a>
+    
+</div>
+
+
+
+<style>
+    .centerImgTop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        top: 150px;
+        transform: translateX(-50%);
+        width: 20%;
+        text-align: center;
+    }
+
+    .custom-button {
+        display: block;
+        border: 2px solid black;
+        background-color: white;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        border-color: #ff9800;
+        color: orange;
+        width: 250px;
+        margin-bottom: 50px;
+        text-decoration: none;
+    }
+
+        .custom-button:hover {
+        background: #ff9800;
+        color: white;
+    }
+
+
+
+</style>
+

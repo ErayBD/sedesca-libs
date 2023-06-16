@@ -1,0 +1,12 @@
+C:\Users\erayd\Desktop\Coding\VS\ServiceLayer\bin\Debug\net7.0\web_project_Services.deps.json
+C:\Users\erayd\Desktop\Coding\VS\ServiceLayer\bin\Debug\net7.0\web_project_Services.dll
+C:\Users\erayd\Desktop\Coding\VS\ServiceLayer\bin\Debug\net7.0\web_project_Services.pdb
+C:\Users\erayd\Desktop\Coding\VS\ServiceLayer\obj\Debug\net7.0\web_project_Services.csproj.AssemblyReference.cache
+C:\Users\erayd\Desktop\Coding\VS\ServiceLayer\obj\Debug\net7.0\web_project_Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erayd\Desktop\Coding\VS\ServiceLayer\obj\Debug\net7.0\web_project_Services.AssemblyInfoInputs.cache
+C:\Users\erayd\Desktop\Coding\VS\ServiceLayer\obj\Debug\net7.0\web_project_Services.AssemblyInfo.cs
+C:\Users\erayd\Desktop\Coding\VS\ServiceLayer\obj\Debug\net7.0\web_project_Services.csproj.CoreCompileInputs.cache
+C:\Users\erayd\Desktop\Coding\VS\ServiceLayer\obj\Debug\net7.0\web_project_Services.dll
+C:\Users\erayd\Desktop\Coding\VS\ServiceLayer\obj\Debug\net7.0\refint\web_project_Services.dll
+C:\Users\erayd\Desktop\Coding\VS\ServiceLayer\obj\Debug\net7.0\web_project_Services.pdb
+C:\Users\erayd\Desktop\Coding\VS\ServiceLayer\obj\Debug\net7.0\ref\web_project_Services.dll
